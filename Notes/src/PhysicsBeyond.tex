@@ -269,5 +269,76 @@ $\rightsquigarrow$ Algebra of geometric vectors translates directly into algebra
 		\item But we cannot answer/ decide what the natural state of motion is in this stage.
 	\end{listHook}
 \end{list2}
-
+\underline{Observation}: State of motion changes due to physical interaction $\rightarrow$ Lets model physical interaction with forces. 
+What is the change in motion due to force?
+\begin{list2}
+	\item The shape of the trajectory is curved 
+	\item We don't know how to model that! \\ $\hookrightarrow$ Back to maths
+\end{list2}
+\section*{Kinematics 2}
+\subsection*{Modelling change in motion}
+\includegraphics[scale=0.4]{example_curve} \\
+Take two points on the above curve, $\vec{x}(t_0)$ and $\vec{x}(t)$.
+The change of displacement is $\Delta \vec{x}$. We know that velocity is change in displacement over change in time so we can find that using:
+\begin{align*}
+\vec{v} & = \frac{\Delta \vec{x}}{\Delta t} \\
+& = \frac{\vec{x}(t)-\vec{t_0}}{t-t_0}
+\end{align*}
+This gives us the average velocity between $t_0$ and $t$. We need to be able to find the velocity at every point in time $t_0$
+\begin{align*}
+\vec{v}: \mathbb{R} & \rightarrow \mathbb{R}^3 \\
+t & \mapsto \text{velocity at t}
+\end{align*}
+Problem: We need a second time $t = t_0 + h$ for $\vec{v}(t_0)$, but there is no natural choice for h.
+We notice for more precision we need to make h as small as possible!
+\begin{align*}
+&\lim_{h \to 0} \frac{\vec{x}(t+h)-\vec{x}(t)}{h} \\
+= & \frac{d\vec{x}}{dt} \text{ Leibniz notation} \\
+= & \dot{\vec{x}}(t) \text{ Newton notation}\\
+\end{align*}
+Differentiation on vectors is just element wise:
+\begin{align*}
+\frac{d}{dt} \begin{bmatrix} R \cos \omega t \\ R \sin \omega t \end{bmatrix} = \omega R \begin{bmatrix}
+-\sin \omega t \\ \cos \omega t \end{bmatrix}
+\end{align*}
+Limits create paradoxes:
+Take $\lim_{h \to 0} \frac{\vec{x}(t+h)-\vec{x}(t)}{h}$. This works mathematically but causes a conceptual problem: How can something change at one point in time? \\
+$\rightsquigarrow$ Solution: Use infinitesimals \\ 
+$\rightarrow$ Numbers that are not provably not 0. 
+Idea: If we zoom in on any curve enough, begins to look like a straight line: e.g. Earth looks flat. \\
+How can we model this mathematically? \\
+$\rightsquigarrow$ Around each point $\vec{x}(t_0)$ the curve is made up of infinitesimal line segments. \\
+Geometrically: A tangent at $\vec{x}(t_0)$ touches the curve at $\vec{x}(t_0)$ \\ 
+$\hookrightarrow$ We take this to mean that it intersects with the curve at an infinitesimal line segment \\
+$\hookrightarrow$ Infinitesimal line segment is the intersection of the tangent and the curve. \\
+Problem: Do not have a rigorous definition of a tangent at a curve! \\
+$\rightarrow$ But we know: Every line that intersects the circle in one points is a tangent $\rightsquigarrow$ Use that!
+\\ \includegraphics[scale=0.4]{circle_tangent} \\
+Take the radius, r, to be 1 and the center to be $(0,1)$.
+\begin{align*}
+&\text{Eqation of circle:} \\
+& c: (x-0)^2 + (y-1)^2 = 1 \\
+&\text{If we take our tangent, t to be the y axis:} \\
+& t: y = 0 \\
+&\text{Sub into c:} \\
+& x^2 +1 = 1 \\
+& \Rightarrow x^2 = 0 \\
+& \therefore c \cap t = \{(d,0)\;|\;d^2=0\} \\ 
+\end{align*}
+$\rightsquigarrow$ Define first order infinitesimals as $D = \{d \in R\;|\;d^2=0\}$ where $R = \mathbb{R} \cup \{\text{infinitesimal numbers}\}$
+Are such infinitesimals going to solve problems?
+\begin{align*}
+f(x) & = x^2 \\
+\Rightarrow & f(x + d) \hspace{2cm} d \in D \\
+& = ( x + d )^2 \\
+& = x^2 + 2dx + d^2 \\
+& = x^2 + 2dx \\
+& = f(x) + f'(x) \cdot d \\\\
+f(x) & = x^3 \\
+\Rightarrow & f(x + d) \\
+& = (x + d)^3 \\
+& = x^3 + 3x^2d + 3xd^2 + d^3 \\
+& = x^3 + 3x^2d \\
+& = f(x) + f'(x) \cdot d \\
+\end{align*}
 \end{document}
