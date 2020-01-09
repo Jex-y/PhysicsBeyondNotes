@@ -341,4 +341,38 @@ f(x) & = x^3 \\
 & = x^3 + 3x^2d \\
 & = f(x) + f'(x) \cdot d \\
 \end{align*}
+\section*{Infinitesimals}
+The derivative is used to solve the tangent problem. We can see that infinitesimals solve this too. \\
+Examples: sine and cosine \\
+Take a unit circle:
+\begin{align*}
+\sin x & = \sqrt{1-\cos^2x} \\
+\Rightarrow \sin d & = \sqrt{1-\cos^2d}
+\end{align*}
+Using and arc of angle $\alpha$ and arc length $l$
+\begin{align*}
+l & = 2 \pi R \cdot \frac{\alpha}{2 \pi} \\
+& = R \alpha \\
+\text{let } \alpha &= d \\
+\Rightarrow l &= d \\
+\therefore & \text{ We are moving on a straight line and instead of an arc it is a right angled triangle} \\
+\Rightarrow \sin{d} & = d \\
+\cos{d} & = \sqrt{1-\sin^2(d)} \\
+& = \sqrt{1-d^2} \\
+& = 1 \\
+\end{align*}
+\begin{align*}
+\Rightarrow & \sin(0+d) = \sin(0) + \sin'(0) \cdot (d) \\
+\Rightarrow & d = \sin'(0) \cdot d \\
+&\text{We would want this to be 1} \\
+\end{align*}
+\begin{align*}
+\cos{d} & = \cos(0+d) \\
+& = \cos(0) + \cos'(0) \cdot d \\
+\end{align*}
+\section*{Limits}
+\begin{align*}
+\cos'(x) & = \lim_{h \to 0} \frac{\cos(x+h) - \cos(x)}{h} \\
+\sin'(x) & = \lim_{h \to 0} \frac{\sin(x+h) - \sin(x)}{h} \\
+\end{align*}
 \end{document}
