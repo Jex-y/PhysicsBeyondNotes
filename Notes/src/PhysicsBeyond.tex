@@ -435,7 +435,7 @@ $f: R \to R \hspace{1cm} g: R \to R \hspace{1cm} \lambda \in \mathbb{R}$
 \subsection*{Linearity}
 \begin{align*}
 (f + \lambda g)' &= f' + \lambda g' \\
-\lambda g: R \to R \hspace{1cm} x \mapsto \lambda g(x)
+\lambda g: R & \to R \hspace{1cm} x \mapsto \lambda g(x)
 \end{align*}
 \subsection*{Proof}
 \begin{align*}
@@ -452,6 +452,15 @@ $f: R \to R \hspace{1cm} g: R \to R \hspace{1cm} \lambda \in \mathbb{R}$
 \end{align*}
 \subsection*{Product Rule}
 \begin{align*}
-
+& f.g = R \to R \hspace{1cm} x \mapsto f(x).g(x) \\
+& (f.g)' = f.g' + f'.g \\
+\end{align*}
+\subsection*{Proof}
+\begin{align*}
+(f.g)(x+d) & = (K-L) (f.g)(x) + (f.g)'(x).d \\
+& = f(x+d).g(x+d) \\
+& = (f(x) + f'(x).d)(g(x) + g'(x).d) \\
+& = f(x).g(x) + f(x).g'(x).d + f'(x).g(x).d + f'(x).g'(x).d^2 \\
+\Rightarrow (f.g)' & = (f.g')(x) + (f'.g)(x) \\
 \end{align*}
 \end{document}
