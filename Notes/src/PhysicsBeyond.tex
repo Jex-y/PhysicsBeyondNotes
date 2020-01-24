@@ -382,7 +382,13 @@ cos'(0) &= 0 \\
 \cos(x+d) & = 
 \end{align*}
 \section*{Limits}
+\subsection*{Definition}
 \begin{align*}
+\lim_{x \to x_0} f(x)& = c \hspace{1cm} \forall \epsilon > 0 \exists \delta > 0 \\
+\forall x |x-x_0| & < \delta \Rightarrow |f(x)-c|< \epsilon (\epsilon, \delta \in \mathbb{R}) \\
+\text{For } v(t_0) \text{ this means }: \\
+\forall \epsilon > 0 \exists \delta > 0 &  \hspace{1cm} \forall \delta \in \mathbb{R} \hspace{1cm} |t-t_0| < \delta \Rightarrow | \frac{x(t) - x(t_0)}{t - t_0} - v(t_0) | < \epsilon
+\\
 \cos'(x) & = \lim_{h \to 0} \frac{\cos(x+h) - \cos(x)}{h} \\
 \sin'(x) & = \lim_{h \to 0} \frac{\sin(x+h) - \sin(x)}{h} \\
 \end{align*}
@@ -399,13 +405,53 @@ $\therefore$ There are unique $a,b\in R$ s.t. $g(d) = a+b.d \hspace{1cm} \forall
 \begin{enumerate}
 \item All graphs of functions $D \rightarrow R$ Should be lines.
 \item The equation of the line has the to be uniquely determined by $g$
+\end{enumerate}
 \subsection*{Proposition}
 $a.d=b.d \hspace{1cm} \forall d \in D \\ \Rightarrow a = b $
 \subsection*{Proof}
 \begin{align*}
 a.d & = b.d \iff a.d-b.d = 0 \iff (a-b).d = 0 \\
 g: & D \rightarrow R \hspace{1cm} d \mapsto (a-b).d \\
-\Rightarrow (K-L)
+\Rightarrow (K-L) g(d) = c+e.d \\
+\text(but) g(d) = 0 + (a-b).d \Rightarrow c=0, e=(a-b) \\
 \end{align*}
-\end{enumerate}
+Since $a.d = b.d" we have g(d) = 0 \hspace{1cm} \forall d \in D$ but by (K-L) $g(d) = c+e.d$ and $c=e=0$ works. So $c=e=0$ since $c$ and $e$ are unique. \\
+$\rightarrow  0 = a-b \iff a = b$
+\subsection*{Example}
+We have:
+\begin{align}
+\sin{d} & = d \\
+\sin{d} & = sin{0} + sin{0}.d
+\end{align}
+\begin{align*}
+(1 = 2) d &= \sin'(0).d \\
+1 &= sin'(0) \\
+\end{align*}
+\subsection*{Definition (Derivative)}
+Let $f: R \rightarrow R$, then according to (K-L), for each $x \in R$ there is a unique $f'(x) \in R$ s.t. $f(x+d) = f(x) + f'(x).d$ \\\\
+We call the map $f': R \rightarrow R \hspace{1cm} x \mapsto f'(x)$ the derivative of $f$.
+\section*{Rules of Differentiation}
+$f: R \to R \hspace{1cm} g: R \to R \hspace{1cm} \lambda \in \mathbb{R}$
+\subsection*{Linearity}
+\begin{align*}
+(f + \lambda g)' &= f' + \lambda g' \\
+\lambda g: R \to R \hspace{1cm} x \mapsto \lambda g(x)
+\end{align*}
+\subsection*{Proof}
+\begin{align*}
+(f + \lambda g)(x + d) &= (K-L) (f + \lambda g)(x) + (f + \lambda g)'(x).d \\
+(f + \lambda g)(x+d) & = f(x+d) + \lambda g(x+d) \\
+& = (K-L) f(x) + f'(x).d + \lambda(g(x) + g'(x).d) \\
+& = (f(x) + \lambda g(x) + (f'(x) + \lambda g'(x)).d \\
+& = (f+\lambda g)(x) + (f' + \lambda g')(x).d \\
+\Rightarrow &(f+\lambda g)(x) + (f + \lambda g)'(x).d = (f + \lambda g)(x) + (f' +\lambda g')(x).d \\
+\Rightarrow & (f+\lambda g)'(x).d = (f' + \lambda g')(x).d \\
+\Rightarrow & (Calcellation Lemma) (f+\lambda g)'(x) = (f' + \lambda g')(x)\\
+& \text{If true for all x, funtions are equal} \\
+\Rightarrow &(f+\lambda g)' = (f'+\lambda g')
+\end{align*}
+\subsection*{Product Rule}
+\begin{align*}
+
+\end{align*}
 \end{document}
