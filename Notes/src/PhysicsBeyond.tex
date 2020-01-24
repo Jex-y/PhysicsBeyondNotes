@@ -386,4 +386,26 @@ cos'(0) &= 0 \\
 \cos'(x) & = \lim_{h \to 0} \frac{\cos(x+h) - \cos(x)}{h} \\
 \sin'(x) & = \lim_{h \to 0} \frac{\sin(x+h) - \sin(x)}{h} \\
 \end{align*}
+Conclusion from examples: Infinitesimal solve the tangent problem easily and allow us to calculate the derivatives, provided that we can find a theory that allows us to cancel infinitesimals. 
+\section*{Theory of Infinitesimals}
+Need: A set of numbers, $R$ with addition, multiplication, and $\mathbb{R} \subseteq R$\\\\
+Why? So that we can do the same algebra as the reals (careful with division). \\\\
+A set $D = \{d\in\mathbb{R} | d^2 = 0\}$ \\
+Satisfying the following axioms (Kock-Lavere Axiom)(K-l) \\
+For all $g: 0 rightarrow R$ \\
+$a.d=b.d \hspace{1cm} \forall d \in D \\ \Rightarrow a = b $ (Cancellation Lemma) \\
+$\therefore$ There are unique $a,b\in R$ s.t. $g(d) = a+b.d \hspace{1cm} \forall d \in D$ \\
+\subsection*{Explanation}
+\begin{enumerate}
+\item All graphs of functions $D \rightarrow R$ Should be lines.
+\item The equation of the line has the to be uniquely determined by $g$
+\subsection*{Proposition}
+$a.d=b.d \hspace{1cm} \forall d \in D \\ \Rightarrow a = b $
+\subsection*{Proof}
+\begin{align*}
+a.d & = b.d \iff a.d-b.d = 0 \iff (a-b).d = 0 \\
+g: & D \rightarrow R \hspace{1cm} d \mapsto (a-b).d \\
+\Rightarrow (K-L)
+\end{align*}
+\end{enumerate}
 \end{document}
